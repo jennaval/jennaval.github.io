@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
-<script language="javascript">
-
-var userAge = prompt("Please enter your age");
-  if (userAge == 0);
-    {
-        alert("So you're a baby!");
-    }
-    else if ( userAge < 0 || userAge > 200)
-        alert("I think you may be lying about your age");
-    else
-    {
-        alert("That's a good age");
-    }
-
-
-</script>
+    <script language="javascript">
+        // Pop up when user opens the page asking a question
+        var userAge = prompt("Please enter your age");
+        if (userAge == 0) // needs two equal signs
+        {
+            alert("So you're a baby!");
+        } else if (userAge < 0 || userAge > 200) // needs to || for condition
+            alert("I think you may be lying about your age");
+        else {
+            alert("That's a good age");
+        }
+    </script>
 
 </body>
+
 </html>
