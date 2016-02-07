@@ -2,21 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JS Question Four</title>
+<title>Code Academy Badges</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <style type="text/css">
-.box {
-  margin: 10px;
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.margin{
+	margin: 20px;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION BAR -->
+
   <nav role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -32,10 +44,9 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="http://jennaval.github.io/">Home</a></li>
-                <li><a href="http://jennaval.github.io/otherProjects/index.html">Code Academy</a></li>
-
+                <li class="active"><a href="http://jennaval.github.io/otherProjects/index.html">Code Academy</a></li>
                 <!-- JS QUESTIONS PAGES-->
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">JS Question <b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
                         <!-- WEEK 2 QUESTIONS -->
@@ -47,7 +58,7 @@
                         <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/one.html">One</a></li>
                         <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/two.html">Two</a></li>
                         <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/three.html">Three</a></li>
-                        <li class="active"><a href="http://jennaval.github.io/otherProjects/jsQuestions/four.html">Four</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/four.html">Four</a></li>
                     </ul>
                 </li>
                 <!-- TWITTER BOOTSTRAP ASSIGNMENTS -->
@@ -65,49 +76,49 @@
                     <input type="text" placeholder="Search" class="form-control">
                 </div>
             </form>
+            <!--
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul> -->
+        </div>
+    </nav>
+<br><br>
+<hr/>
 
+<h1 class="text-center">CodeAcademy Badges</h1>
+<!-- Code Academy Badges -->
+
+<div class="row">
+  <div class="col-sm-2"><img src="images/1.png"/></div>
+  <div class="col-sm-2"><img src="images/2.png"/></div>
+  <div class="col-sm-2"><img src="images/3.png"/></div>
+  <div class="col-sm-2"><img src="images/4.png"/></div>
+  <div class="col-sm-2"><img src="images/5.png"/></div>
+  <div class="col-sm-2"><img src="images/6.png"/></div>
+  <div class="col-sm-2"><img src="images/7.png"/></div>
+  <div class="col-sm-2"><img src="images/8.png"/></div>
+  <div class="col-sm-2"><img src="images/9.png"/></div>
+  <div class="col-sm-2"><img src="images/10.png"/></div>
+  <div class="col-sm-2"><img src="images/11.png"/></div>
+  <div class="col-sm-2"><img src="images/12.png"/></div>
+  <div class="col-sm-2"><img src="images/13.png"/></div>
+  <div class="col-sm-2"><img src="images/14.png"/></div>
+  <div class="col-sm-2"><img src="images/15.png"/></div>
+  <div class="col-sm-2"><img src="images/16.png"/></div>
+  <div class="col-sm-2"><img src="images/17.png"/></div>
+  <div class="col-sm-2"><img src="images/18.png"/></div>
+  <div class="col-sm-2"><img src="images/19.png"/></div>
+  <div class="col-sm-2"><img src="images/20.png"/></div>
+  <div class="col-sm-2"><img src="images/21.png"/></div>
+  <div class="col-sm-2"><img src="images/22.png"/></div>
+  <div class="col-sm-2"><img src="images/23.png"/></div>
+  <div class="col-sm-2"><img src="images/24.png"/></div>
+  <div class="col-sm-2"><img src="images/25.png"/></div>
+  <div class="col-sm-2"><img src="images/26.png"/></div>
+  <div class="col-sm-2"><img src="images/27.png"/></div>
 </div>
-</nav>
-<br><br><br>
 
-<!-- JAVASCRIPT QUESTION 4 WEEK 4 -->
-
-<div class="box">
-
-    <script language="javascript">
-
-    function writeTimesTable(timesTable, timesByStart, timesByEnd)
-    {
-       for (;timesByStart <= timesByEnd; timesByStart++)
-       {
-          document.write(timesTable + " * " + timesByStart + " = " +
-             timesByStart * timesTable + "<br>");
-       }
-    }
-
-    var timesTable;
-
-    while ( (timesTable = prompt("Enter the times table",-1)) != -1)
-    {
-       while (isNaN(timesTable) == true)
-       {
-        timesTable = prompt(timesTable + " is not a valid number, please retry",-1);
-
-       }
-
-       if (timesTable == -1)
-       {
-          break;
-       }
-
-       document.write("<br>The " + timesTable + " times table<br>");
-       writeTimesTable(timesTable,1,12);
-
-    }
-
-    </script>
-
-</div>
+<hr/>
 
 </body>
 </html>
