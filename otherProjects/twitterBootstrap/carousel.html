@@ -1,158 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Carousel</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<style type="text/css">
-.carousel{
-    background: #2f4357;
-    margin-top: 20px;
-}
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-}
-.margin{
-	margin: 20px;
-}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .carousel {
+      background: #2f4357;
+      margin-top: 20px;
+    }
+
+    .carousel .item img {
+      margin: 0 auto;
+      /* Align slide image horizontally center */
+    }
+
+    .margin {
+      margin: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
 
   <nav role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-              <!--  <span class="sr-only">Jenna Valaydon</span> -->
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand">Jenna Valaydon</div>
-        </div>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="http://jennaval.github.io/">Home</a></li>
-                <li><a href="http://jennaval.github.io/otherProjects/codeAcademy/index.html">Code Academy</a></li>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <!--  <span class="sr-only">Jenna Valaydon</span> -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">Jenna Valaydon</div>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="http://jennaval.github.io/">Home</a></li>
+        <li><a href="http://jennaval.github.io/otherProjects/codeAcademy/index.html">Code Academy</a></li>
 
-                <!-- JS QUESTIONS PAGES-->
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">JS Question <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <!-- WEEK 2 QUESTIONS -->
-                        <li class="dropdown-header">Week 2</li>
-                        <li><a href="http://jennaval.github.io/js.html">One</a></li>
-                        <li><a href="http://jennaval.github.io/js-two.html">Two</a></li>
-                        <!-- WEEK 3 QUESTIONS -->
-                        <li class="dropdown-header">Week 3</li>
-                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/one.html">One</a></li>
-                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/two.html">Two</a></li>
-                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/three.html">Three</a></li>
-                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/four.html">Four</a></li>
-                    </ul>
-                </li>
-                <!-- TWITTER BOOTSTRAP ASSIGNMENTS -->
-                <li class="dropdown active">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Twitter Bootstrap <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/week2.html">Week 2</a></li>
-                        <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/index.html">Week 3</a></li>
-                        <li class="active"><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/carousel.html">Carousel</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form role="search" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                </div>
-            </form>
-            <!--
+        <!-- JS QUESTIONS PAGES-->
+        <li class="dropdown">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">JS Question <b class="caret"></b></a>
+          <ul role="menu" class="dropdown-menu">
+            <!-- WEEK 2 QUESTIONS -->
+            <li class="dropdown-header">Week 2</li>
+            <li><a href="http://jennaval.github.io/js.html">One</a></li>
+            <li><a href="http://jennaval.github.io/js-two.html">Two</a></li>
+            <!-- WEEK 3 QUESTIONS -->
+            <li class="dropdown-header">Week 3</li>
+            <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/one.html">One</a></li>
+            <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/two.html">Two</a></li>
+            <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/three.html">Three</a></li>
+            <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/four.html">Four</a></li>
+          </ul>
+        </li>
+        <!-- TWITTER BOOTSTRAP ASSIGNMENTS -->
+        <li class="dropdown active">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">Twitter Bootstrap <b class="caret"></b></a>
+          <ul role="menu" class="dropdown-menu">
+            <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/week2.html">Week 2</a></li>
+            <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/index.html">Week 3</a></li>
+            <li class="active"><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/carousel.html">Carousel</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form role="search" class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Search" class="form-control">
+        </div>
+      </form>
+      <!--
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Login</a></li>
             </ul> -->
-        </div>
-    </nav>
-<br><br>
-<hr/>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <hr/>
 
-<h1 class="text-center">Carousel</h1>
-<!-- CAROUSEL -->
-<div class="margin">
+  <h1 class="text-center">Carousel</h1>
+  <!-- CAROUSEL -->
+  <div class="margin">
 
     <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
-    	  <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-        </ol>
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-            <div class="active item">
-                <img src="images/1.jpg" alt="First Slide">
-         		<div class="carousel-caption">
-                  <h3>Pebbles</h3>
-                  <p>Colourful</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/2.jpg" alt="Second Slide">
-                <div class="carousel-caption">
-                  <h3>Camera</h3>
-                  <p>Accessories</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/3.jpg" alt="Third Slide">
-                <div class="carousel-caption">
-                  <h3>Bicycle</h3>
-                  <p>Night photography</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/4.jpg" alt="Third Slide">
-                <div class="carousel-caption">
-                  <h3>Lights</h3>
-                  <p>City night lights</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/5.jpg" alt="Third Slide">
-                <div class="carousel-caption">
-                  <h3>Beach</h3>
-                  <p>Deserted beach</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/6.jpg" alt="Third Slide">
-                <div class="carousel-caption">
-                  <h3>City</h3>
-                  <p>Busy city</p>
-                </div>
-            </div>
+      <!-- Carousel indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+      </ol>
+      <!-- Wrapper for carousel items -->
+      <div class="carousel-inner">
+        <div class="active item">
+          <img src="images/1.jpg" alt="First Slide">
+          <div class="carousel-caption">
+            <h3>Pebbles</h3>
+            <p>Colourful</p>
+          </div>
         </div>
+        <div class="item">
+          <img src="images/2.jpg" alt="Second Slide">
+          <div class="carousel-caption">
+            <h3>Camera</h3>
+            <p>Accessories</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/3.jpg" alt="Third Slide">
+          <div class="carousel-caption">
+            <h3>Bicycle</h3>
+            <p>Night photography</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/4.jpg" alt="Third Slide">
+          <div class="carousel-caption">
+            <h3>Lights</h3>
+            <p>City night lights</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/5.jpg" alt="Third Slide">
+          <div class="carousel-caption">
+            <h3>Beach</h3>
+            <p>Deserted beach</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/6.jpg" alt="Third Slide">
+          <div class="carousel-caption">
+            <h3>City</h3>
+            <p>Busy city</p>
+          </div>
+        </div>
+      </div>
 
-        <!-- Carousel controls -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+      <!-- Carousel controls -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
-</div>
+  </div>
 
-<hr/>
+  <hr/>
 
 </body>
+
 </html>
