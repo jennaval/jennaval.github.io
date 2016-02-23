@@ -1,29 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Bootstrap 3 Responsive Template</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Week 5 Questions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-          Week 5 Questions2
+  <!-- NAVIGATION BAR -->
+  <nav role="navigation" class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+              <!--  <span class="sr-only">Jenna Valaydon</span> -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">Jenna Valaydon</div>
         </div>
-    </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://jennaval.github.io/">Home</a></li>
+                <li><a href="http://jennaval.github.io/otherProjects/codeAcademy/index.html">Code Academy</a></li>
+
+                <!-- JS QUESTIONS PAGES-->
+                <li class="dropdown active">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">JS Question <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <!-- WEEK 2 QUESTIONS -->
+                        <li class="dropdown-header">Week 2</li>
+                        <li><a href="http://jennaval.github.io/js.html">One</a></li>
+                        <li><a href="http://jennaval.github.io/js-two.html">Two</a></li>
+                        <!-- WEEK 3 QUESTIONS -->
+                        <li class="dropdown-header">Week 3</li>
+                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/one.html">One</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/two.html">Two</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/three.html">Three</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/jsQuestions/four.html">Four</a></li>
+                        <li class="dropdown-header">Week 5</li>
+                        <li class="active"><a href="http://jennaval.github.io/otherProjects/jsQuestions/week5Question.html">Week 5 Questions</a></li>
+                    </ul>
+                </li>
+                <!-- TWITTER BOOTSTRAP ASSIGNMENTS -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Twitter Bootstrap <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/week2.html">Week 2</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/index.html">Week 3</a></li>
+                        <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/carousel.html">Carousel</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form role="search" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                </div>
+            </form>
+
 </div>
+</nav>
+<br><br><br>
+
+<!-- START OF WEEK 5 QUESTIONS -->
+
+  <div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#q1" aria-controls="home" role="tab" data-toggle="tab">Q1</a></li>
+      <li role="presentation"><a href="#q2" aria-controls="profile" role="tab" data-toggle="tab">Q2</a></li>
+      <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">Q3</a></li>
+      <li role="presentation"><a href="#q4" aria-controls="settings" role="tab" data-toggle="tab">Q4</a></li>
+      <li role="presentation"><a href="#q5" aria-controls="settings" role="tab" data-toggle="tab">Q5</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <!-- QUESTION ONE STARTS -->
+      <div role="tabpanel" class="tab-pane active" id="q1">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function getTriangle() {
+
+                var str = "";
+
+                for (var i = 1; i <= 6; i++) {
+                  // write i stars + <br/>
+                  //console.log("i "+i);
+                  for (var j = 1; j <= i; j++) {
+                    //console.log("i "+ i +" j "+j);
+                    str = str + "#";
+                    //  console.log("str "+str);
+                  }
+                  str = str + "br/";
+                }
+                // write the triangle to the screen
+                $("#q1result").html(str);
+              }
+
+              $("#q1Button").on("click", function() {
+
+                // var result = getTriangle();
+                // we want the string below
+                getTriangle();
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q1Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q1result">
 
 
-<script>
-  $(document).ready(function() {
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION ONE -->
 
-  });
+      <!-- QUESTION TWO STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q2">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function getFoobar() {
+
+                //  var result = "";
+                for (var i = 0; i < 100; i++) {
+                  var number = i + 1;
+                  var result = "";
+                  if (number % 3 == 0) {
+                    result = "Foo";
+                  }
+                  if (number % 5 == 0) {
+                    result += "Bar";
+                  }
+                  if (!result) {
+                    result = i + 1;
+                  }
+                  result = result;
+                  console.log(result);
+                }
+
+                // write the result to the screen
+                $("#q2result").html(result);
+              }
+              $("#q2Button").on("click", function() {
+
+                // var result = getFoobar();
+                // we want the string below
+                getFoobar();
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q2Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q2result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION TWO -->
+
+      <!-- QUESTION THREE STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q3">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function getBoard() {
+
+                var size = 8;
+                var board = "";
+                for (var y = 0; y < size; y++) {
+                  for (var x = 0; x < size; x++) {
+                    if ((x + y) % 2 == 0)
+                      board += " ";
+                    else
+                      board += "#";
+                  }
+                  board += "\n" + "<br/>";
+
+                  //  board = board + "<br/>";
+                  //  console.log(board);
+                }
+                // write the Chessboard to the screen
+                $("#q3result").html(board);
+              }
+
+              $("#q3Button").on("click", function() {
+                // we want the string below
+                getBoard();
+
+              });
+
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q3Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q3result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION THREE -->
+
+      <!-- QUESTION FOUR STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q4">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function getCount() {
+
+                function countBs(myString) {
+                  var strCount = 0;
+                  for (i = 0; i < myString.length; i++) {
+                    if (myString[i] === "B") {
+                      strCount = strCount + 1;
+                    }
+                  }
+                  return strCount;
+                }
+                //console.log(countBs("BBC"));
+                $("#q4result").html(countBs("BBC"));
+              }
+
+              $("#q4Button").on("click", function() {
+                // we want the string below
+                getCount();
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q4Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q4result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION FOUR -->
+
+      <!-- QUESTION FIVE STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q5">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function getChar() {
+                function countChar(myString, letter) {
+                  var strCount = 0;
+                  for (i = 0; i < myString.length; i++) {
+                    if (myString[i] === letter) {
+                      strCount = strCount + 1;
+                    }
+                  }
+                  return strCount;
+                }
+
+                $("#q5result").html(countChar("kakkerlak", "k"));
+              }
+
+              $("#q5Button").on("click", function() {
+                // we want the string below
+                getChar();
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q5Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q5result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION FIVe -->
+
+
+
+    </div>
+    <!-- closes .tab-container -->
+
+  </div>
+  <!-- closes .container -->
+
+
+  <script>
+    $(document).ready(function() {
+      // question 1
+      // this function prints a triangle of hashtags to the screen
+
+      function getTriangle() {
+
+        var str = "";
+
+        for (var i = 1; i <= 7; i++) {
+          // write i stars + <br/>
+          //console.log("i "+i);
+          for (var j = 1; j <= i; j++) {
+            //console.log("i "+ i +" j "+j);
+            str = str + "#";
+            //  console.log("str "+str);
+          }
+          str = str + "<br/>";
+        }
+        // write the triangle to the screen
+
+        $("#q1result").html(str);
+
+      }
+
+      $("#q1Button").on("click", function() {
+
+        // var result = getTriangle();
+        // we want the string below
+        getTriangle();
+
+      });
+
+      // QUESTION TWO QUESTION TWO
+
+      //    $("#q2Button").on("click", function() {
+      //for loop and some ifs statements
+      function getFoobar() {
+
+        //  var str = "";
+        //
+        for (var i = 0; i < 100; i++) {
+          var number = i + 1;
+          var result = "";
+          if (number % 3 == 0) {
+            result = "Foo";
+          }
+          if (number % 5 == 0) {
+            result += "Bar";
+          }
+          if (!result) {
+            result = i + 1;
+          }
+
+          result = result; //+ "<br/>";
+          document.write(result + "<br/>");
+        }
+
+        // write the triangle to the screen
+
+        $("#q2result").html(result);
+
+      }
+
+      $("#q2Button").on("click", function() {
+
+        // var result = getFoobar();
+        // we want the string below
+        getFoobar();
+
+      });
+
+      //        $("#q2result").html("answer two!");
+
+      // QUESTION THREE QUESTION THREE
+      function getBoard() {
+
+        var size = 8;
+        var board = "";
+        for (var y = 0; y < size; y++) {
+          for (var x = 0; x < size; x++) {
+            if ((x + y) % 2 == 0)
+              board += " ";
+            else
+              board += "#";
+          }
+          board += "\n" + "<br/>";
+
+          //  board = board + "<br/>";
+            console.log(board);
+        }
+        // write the board to the screen
+
+        $("#q3result").html(board + "\n");
+
+      }
+
+      $("#q3Button").on("click", function() {
+
+        // var result = getTriangle();
+        // we want the string below
+        getBoard();
+
+      });
+
+
+      // QUESTION FOUR QUESTION FOUR
+      function getCount() {
+
+        //  var str = "";
+        //
+        function countBs(myString) {
+          var strCount = 0;
+          for (i = 0; i < myString.length; i++) {
+            if (myString[i] === "B") {
+              strCount = strCount + 1;
+            }
+
+          }
+          return strCount;
+        }
+        //console.log(countBs("BBC"));
+        $("#q4result").html(countBs("BBC"));
+
+      }
+
+      $("#q4Button").on("click", function() {
+
+        // we want the string below
+        getCount();
+
+      });
+
+
+      // QUESTION FIVE QUESTION FIVE
+      function getChar() {
+        function countChar(myString, letter) {
+          var strCount = 0;
+          for (i = 0; i < myString.length; i++) {
+            if (myString[i] === letter) {
+              strCount = strCount + 1;
+            }
+
+          }
+          return strCount;
+        }
+
+        $("#q5result").html(countChar("kakkerlak", "k"));
+
+      }
+
+      $("#q5Button").on("click", function() {
+
+        // we want the string below
+        getChar();
+
+      });
+
+
+    });
+
+    //  });
   </script>
 
 </body>
+
 </html>
