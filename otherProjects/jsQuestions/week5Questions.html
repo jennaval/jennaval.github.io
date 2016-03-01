@@ -57,6 +57,7 @@
             <li><a href="http://jennaval.github.io/otherProjects/twitterBootstrap/carousel.html">Carousel</a></li>
           </ul>
         </li>
+        <li><a href="http://jennaval.github.io/otherProjects/ticTacToe/index.html">Tic Tac Toe</a></li>
       </ul>
       <form role="search" class="navbar-form navbar-right">
         <div class="form-group">
@@ -81,6 +82,11 @@
       <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">Q3</a></li>
       <li role="presentation"><a href="#q4" aria-controls="settings" role="tab" data-toggle="tab">Q4</a></li>
       <li role="presentation"><a href="#q5" aria-controls="settings" role="tab" data-toggle="tab">Q5</a></li>
+      <li role="presentation"><a href="#q6" aria-controls="settings" role="tab" data-toggle="tab">Q6</a></li>
+      <li role="presentation"><a href="#q7" aria-controls="settings" role="tab" data-toggle="tab">Q7</a></li>
+      <li role="presentation"><a href="#q8" aria-controls="settings" role="tab" data-toggle="tab">Q8</a></li>
+      <li role="presentation"><a href="#q9" aria-controls="settings" role="tab" data-toggle="tab">Q9</a></li>
+
     </ul>
 
     <!-- Tab panes -->
@@ -142,26 +148,28 @@
             <pre>
               function getFoobar() {
 
-                //  var result = "";
-                for (var i = 0; i < 100; i++) {
-                  var number = i + 1;
-                  var result = "";
-                  if (number % 3 == 0) {
-                    result = "Foo";
+                //  var str = "";
+                //
+                var print = "";
+                var number = Number(1);
+                for (i = Number(1); i <= 100; i++) {
+                  if (i % 3 == 0 && i % 5 == 0) {
+                    print = print + "FooBar" + "<br/>";
+                  } else if (i % 3 == 0) {
+                    print = print + "Foo" + "<br/>";
+                  } else if (i % 5 == 0) {
+                    print = print + "Bar " + "<br/>";
+                  } else {
+                    print = print + i + "<br/>";
                   }
-                  if (number % 5 == 0) {
-                    result += "Bar";
-                  }
-                  if (!result) {
-                    result = i + 1;
-                  }
-                  result = result;
-                  console.log(result);
                 }
 
-                // write the result to the screen
-                $("#q2result").html(result);
+                // write the triangle to the screen
+
+                $("#q2result").html(print);
+
               }
+
               $("#q2Button").on("click", function() {
 
                 // var result = getFoobar();
@@ -169,6 +177,7 @@
                 getFoobar();
 
               });
+
             </pre>
           </div>
           <div class="col-md-12">
@@ -313,8 +322,174 @@
           </div>
         </div>
       </div>
-      <!-- END OF QUESTION FIVe -->
+      <!-- END OF QUESTION FIVE -->
 
+      <!-- QUESTION SIX STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q6">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function range(start, end) {
+                var arr = [];
+                // arr.push(1);
+                // arr.push(5);
+                if (start <= end) {
+                  for (start; start <= end; start++) {
+                    // console.log("start: " + start);
+                    arr.push(start);
+                  }
+                }
+                return arr;
+              }
+
+              $("#q6Button").on("click", function() {
+                // range(2,5);
+                var rangeAnswer = range(2, 5);
+
+                $("#q6result").html("Answer is: " + rangeAnswer.join());
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q6Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q6result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION SIX -->
+
+      <!-- QUESTION SEVEN STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q7">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function sumArray(array) {
+
+                var total = 0,
+                  count = 1;
+                while (count <= 10) {
+                  total += count;
+                  count += 1;
+                }
+                return total;
+              }
+
+              $("#q7Button").on("click", function() {
+
+                // alert("6");
+                // range(3,5);
+                range[1, 10];
+
+                $("#q7result").html(sumArray);
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q7Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q7result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION SEVEN -->
+
+      <!-- QUESTION EIGHT STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q8">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function reverseArray(array) {
+                var revArray = [],
+                  arrayLength = array.length;
+                for (var i = 0; i < arrayLength; i++) {
+                  var popped = array.pop();
+                  revArray.push(popped);
+                }
+                return revArray;
+              }
+
+              $("#q8Button").on("click", function() {
+                // elements to reverse
+                var raAnswer = reverseArray(["A", "B", "C"]);
+
+                $("#q8result").html("Answer is: " + raAnswer);
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q8Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q8result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION EIGHT -->
+
+
+      <!-- QUESTION NINE STARTS -->
+      <div role="tabpanel" class="tab-pane" id="q9">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- pre tags -->
+            <pre>
+              function reverseArrayInPlace(array) {
+                var arrayLength = array.length;
+                var halfWay = Math.floor(array.length / 2);
+                var temp = 0;
+
+                for (var i = 0; i < halfWay; i++) {
+                  temp = array[i];
+                  array[i] = array[arrayLength - 1 - i];
+                  array[arrayLength - 1 - i] = temp;
+                }
+                return array;
+              }
+
+              $("#q9Button").on("click", function() {
+                // elements to reverse
+              var arrayValue = [1, 2, 3, 4, 5];
+              reverseArrayInPlace(arrayValue);
+              // console.log(arrayValue); //[5, 4, 3, 2, 1]
+                $("#q9result").html("Answer is: " + arrayValue);
+
+              });
+            </pre>
+          </div>
+          <div class="col-md-12">
+            <!-- button -->
+            <button id="q9Button" class="btn btn-default" type="button">Show Results</button>
+          </div>
+          <div class="col-md-12">
+            <!-- result -->
+            <div id="q9result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF QUESTION NINE -->
 
 
     </div>
@@ -365,26 +540,23 @@
 
         //  var str = "";
         //
-        for (var i = 0; i < 100; i++) {
-          var number = i + 1;
-          var result = "";
-          if (number % 3 == 0) {
-            result = "Foo";
+        var print = "";
+        var number = Number(1);
+        for (i = Number(1); i <= 100; i++) {
+          if (i % 3 == 0 && i % 5 == 0) {
+            print = print + "FooBar" + "<br/>";
+          } else if (i % 3 == 0) {
+            print = print + "Foo" + "<br/>";
+          } else if (i % 5 == 0) {
+            print = print + "Bar " + "<br/>";
+          } else {
+            print = print + i + "<br/>";
           }
-          if (number % 5 == 0) {
-            result += "Bar";
-          }
-          if (!result) {
-            result = i + 1;
-          }
-
-          result = result; //+ "<br/>";
-          document.write(result + "<br/>");
         }
 
         // write the triangle to the screen
 
-        $("#q2result").html(result);
+        $("#q2result").html(print);
 
       }
 
@@ -479,6 +651,97 @@
         getChar();
 
       });
+
+      // QUESTION SIX QUESTION SIX
+
+      function range(start, end) {
+        var arr = [];
+        // arr.push(1);
+        // arr.push(5);
+        if (start <= end) {
+          for (start; start <= end; start++) {
+            // console.log("start: " + start);
+            arr.push(start);
+          }
+        }
+        return arr;
+      }
+
+      $("#q6Button").on("click", function() {
+        // range(2,5);
+        var rangeAnswer = range(2, 5);
+
+        $("#q6result").html("Answer is: " + rangeAnswer.join());
+
+      });
+
+      // QUESTION SEVEN QUESTION SEVEN
+
+      function sumArray(array) {
+
+        var total = 0,
+          count = 1;
+        while (count <= 10) {
+          total += count;
+          count += 1;
+        }
+        return total;
+      }
+
+      $("#q7Button").on("click", function() {
+
+        // alert("6");
+        // range(3,5);
+        range[1, 10];
+
+        $("#q7result").html(sumArray);
+
+      });
+
+      // QUESTION EIGHT QUESTION EIGHT
+
+      function reverseArray(array) {
+        var revArray = [],
+          arrayLength = array.length;
+        for (var i = 0; i < arrayLength; i++) {
+          var popped = array.pop();
+          revArray.push(popped);
+        }
+        return revArray;
+      }
+
+      $("#q8Button").on("click", function() {
+        // elements to reverse
+        var raAnswer = reverseArray(["A", "B", "C"]);
+
+        $("#q8result").html("Answer is: " + raAnswer);
+
+      });
+
+      // QUESTION NINE QUESTION NINE
+
+      // reverses the order of its elements
+      function reverseArrayInPlace(array) {
+        var arrayLength = array.length;
+        var halfWay = Math.floor(array.length / 2);
+        var temp = 0;
+
+        for (var i = 0; i < halfWay; i++) {
+          temp = array[i];
+          array[i] = array[arrayLength - 1 - i];
+          array[arrayLength - 1 - i] = temp;
+        }
+        return array;
+      }
+
+      $("#q9Button").on("click", function() {
+        // elements to reverse
+        var arrayValue = [1, 2, 3, 4, 5];
+        reverseArrayInPlace(arrayValue);
+        // console.log(arrayValue); //[5, 4, 3, 2, 1]
+        $("#q9result").html("Answer is: " + arrayValue);
+      });
+
 
 
     });
