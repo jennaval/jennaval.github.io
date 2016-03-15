@@ -23,11 +23,11 @@ $(document).ready(function() {
           })
 
           html += "</table>";
-          $("#data").append(html;)
+          $("#data").append(html);
         }) // getJSON
 
 
 
     }) //click
 
-})
+});
