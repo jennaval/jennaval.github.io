@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>JS Question Two</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style type="text/css">
-.box {
-  margin: 10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>JS Question Two</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .box {
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- NAVIGATION BAR -->
 
-<br><br><br>
+  <br>
+  <br>
+  <br>
 
-<!-- JAVASCRIPT QUESTION 2 WEEK 3 -->
+  <!-- JAVASCRIPT QUESTION 2 WEEK 3 -->
+  <div class="container">
+    <div class="box">
 
-<div class="box">
+      <script language="javascript">
+        var timesTable = 12; //table of 12
+        var timesBy;
 
-	<script language="javascript">
-		var timesTable = 12; //table of 12
-		var timesBy;
+        // display results each time by 1 until it reaches to 12x12
+        for (timesBy = 1; timesBy < 13; timesBy++) {
+          document.write(timesTable + " * " + timesBy + " = " + timesBy * timesTable +
+            "<br>");
+        }
+      </script>
+    </div>
+  </div>
 
-    // display results each time by 1 until it reaches to 12x12
-		for (timesBy = 1; timesBy < 13; timesBy++) {
-			document.write(timesTable + " * " + timesBy + " = " + timesBy * timesTable +
-				"<br>");
-		}
-	</script>
-</div>
-
-<script src="http://jennaval.github.io/js/getNav.js"></script>
+  <script src="http://jennaval.github.io/js/getNav.js"></script>
 
 </body>
 
