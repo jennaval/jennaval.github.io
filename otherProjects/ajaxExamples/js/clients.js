@@ -1,22 +1,37 @@
-$(document).ready(function(){
+< table >
+  < tr > < th > < /th> <th></th > < th > < /th> </tr >
+  < tr >
 
-$("#getClients").on("click", function() {
-  // alert("working");
+  $(document).ready(function() {
 
-  var url = "http://jennaval.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
-  $.getJSON(url, function(data) {
+    $("#getClients").on("click", function() {
+        // alert("working");
 
-    // alert(data);
-    // console.dir(data);
-    $.each(data, function(index, item){
+        var url = "http://jennaval.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
+        $.getJSON(url, function(data) {
 
-      $("#data").append(item.name);
-    })
+          var html = "<table>" +
+            "<tr><th>Name</th><th>Email</th><th>Company</th></tr>";
+          // alert(data);
+          // console.dir(data);
+          $.each(data, function(index, item) {
 
-  }) // getJSON
+            $("#data").append(item.name);
+          })
+
+          html += "<tr>" +
+          "<td>" + item.name + "</td>" +
+          "<td>" + item.email + "</td>" +
+          "<td>" + item.company + "</td>" +
+          "</tr>";
+        })
+
+        html += "</table>";
+        $("#data").append(html;)
+      }) // getJSON
 
 
 
-}) //click
+  }) //click
 
 });
