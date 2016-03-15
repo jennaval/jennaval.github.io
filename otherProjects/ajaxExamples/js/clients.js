@@ -20,10 +20,10 @@
           })
 
           html += "<tr>" +
-          "<td>" + item.name + "</td>" +
-          "<td>" + item.email + "</td>" +
-          "<td>" + item.company + "</td>" +
-          "</tr>";
+            "<td>" + item.name + "</td>" +
+            "<td>" + item.email + "</td>" +
+            "<td>" + item.company + "</td>" +
+            "</tr>";
         })
 
         html += "</table>";
