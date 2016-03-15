@@ -16,8 +16,8 @@
           // console.dir(data);
           $.each(data, function(index, item) {
 
-            $("#data").append(item.name);
-          })
+        //    $("#data").append(item.name);
+        //  })
 
           html += "<tr>" +
             "<td>" + item.name + "</td>" +
