@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Take An Order Regular HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- START OF LAB 8 -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <label>Name:</label>
+        <input id="mySingleLineText" class="form-control" onblur="if(this.value == '') { this.value = 'Type here'; }" onfocus="if(this.value == 'Type here') { this.value = ''; }" type="text" value="Type here">
+      </div>
+      <br>
+      <div class="col-md-12">
+        <label>Message:</label>
+        <textarea id="myTextArea" class="form-control" rows="10" cols="50" onblur="if(this.value == '') { this.value = 'Write something here'; }" onfocus="if(this.value == 'Write something here') { this.value = ''; }">Write something here</textarea>
+      </div>
+      <div class="col-md-12">
+        <label>Age:</label>
+        <select id="mySelect">
+          <option value="value1">Value 1</option>
+          <option value="value2" selected>Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </div>
+      <div class="col-md-12">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="vehicle" value="Bike"> I have a bike
+          </label>
+          <div class="checkbox">
+          <label>
+            <input type="checkbox" name="vehicle" value="Car"> I have a car
+          </label>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button id="myButton" class="btn btn-primary" type="button">Click Me!</button>
+      </div>
+      <div class="col-md-12">
+      </div>
+
+<div id="log">LOG</div>
+    </div>
+  </div>
+  <!-- closes #id -->
+
+
+  <script src="js/takeAnOrder.js"></script>
+
+
+</body>
+
+</html>
