@@ -19,7 +19,7 @@ $(document).ready(function() {
     })
     .on("mouseleave", function() {
       $("#log").append("<br>Button mouseleave");
-      $(this).text("Click Me!");
+      $(this).text("Submit Order");
     });
 
   //focus & blur events
@@ -33,6 +33,7 @@ $(document).ready(function() {
       $("#log").append("<br>Input blur");
       $(this).css("background-color", "#FFF");
     });
+
   //change event
   $("#mySelect").on("change", function() {
     $("#log").append("<br>Select change");
