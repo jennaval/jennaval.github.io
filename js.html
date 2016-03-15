@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>JavaScript Question One</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style type="text/css">
-.box {
-  margin: 10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>JavaScript Question One</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://jennaval.github.io/css/style.css">
+
+  <style type="text/css">
+    .box {
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- NAVIGATION BAR -->
 
-<br><br><br>
+  <br>
+  <br>
+  <br>
 
 
-<!-- JAVASCRIPT QUESTION 1 WEEK 2-->
-<div class="box">
+  <!-- JAVASCRIPT QUESTION 1 WEEK 2-->
+  <div class="container">
+    <div class="box">
 
-    <script type="text/javascript">
+      <script type="text/javascript">
+        // degFahren = 9 / 5 * degCent + 32
 
+        var degCent = prompt("Enter the degrees in centigrade", 0);
+        var degFahren = 9 / 5 * degCent + 32;
 
-    // degFahren = 9 / 5 * degCent + 32
+        document.write(degCent + " degrees centigrade is " + degFahren +
+          " degrees Fahrenheit");
+      </script>
+    </div>
+  </div>
 
-    var degCent = prompt("Enter the degrees in centigrade",0);
-    var degFahren = 9 / 5 * degCent + 32;
-
-    document.write(degCent + " degrees centigrade is " + degFahren +
-       " degrees Fahrenheit");
-
-    </script>
-</div>
-
-<script src="http://jennaval.github.io/js/getNav.js"></script>
+  <script src="http://jennaval.github.io/js/getNav.js"></script>
 
 </body>
+
 </html>
