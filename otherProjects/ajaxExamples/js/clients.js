@@ -1,7 +1,3 @@
-< table >
-  < tr > < th > < /th> <th></th > < th > < /th> </tr >
-  < tr >
-
   $(document).ready(function() {
 
     $("#getClients").on("click", function() {
