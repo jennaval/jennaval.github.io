@@ -24,10 +24,11 @@ $(document).ready(function() {
 
           html += "</table>";
           $("#data").append(html);
+
         }) // getJSON
 
 
 
     }) //click
 
-});
+})
