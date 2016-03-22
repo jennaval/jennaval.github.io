@@ -1,0 +1,55 @@
+[{
+  "type": "Calico",
+  "name": "Paws",
+  "gender": "Male",
+  "image": "images/cat.jpg",
+  "comments": [{
+    "username": "AboveAlpha",
+    "stars": 5,
+    "comment": "Best cat ever"
+  }, {
+    "username": "BrashTaga",
+    "stars": 3,
+    "comment": "Alright cat"
+  }, {
+    "username": "Dragonakom",
+    "stars": 2,
+    "comment": "Ugh"
+  }]
+}, {
+  "type": "Tabby",
+  "name": "Mittens",
+  "gender": "Female",
+  "image": "images/cat2.jpg",
+  "comments": [{
+    "username": "Jubeamese",
+    "stars": 1,
+    "comment": "Worst cat ever"
+  }, {
+    "username": "Pearbrai",
+    "stars": 4,
+    "comment": "Pretty cool"
+  }, {
+    "username": "FacePriceless",
+    "stars": 2,
+    "comment": "Meh"
+  }]
+}, {
+  "type": "Siamese",
+  "name": "Robert",
+  "gender": "Unspecified",
+  "image": "images/cat3.jpg",
+  "comments": [{
+    "username": "Ravenertu",
+    "stars": 3,
+    "comment": "Okay"
+  }, {
+    "username": "Roadbed",
+    "stars": 5,
+    "comment": "Meow"
+  }, {
+    "username": "Iconaler",
+    "stars": 1,
+    "comment": "Nah."
+  }]
+}]

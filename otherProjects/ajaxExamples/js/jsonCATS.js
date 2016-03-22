@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
-  alert("J");
+  // alert("J");
   // $.getJSON
+  $.getJSON("jsonDatabase/jsonCATS.json", function(data){
 
-  
+    console.dir(data);
+
+  })
+
 })
