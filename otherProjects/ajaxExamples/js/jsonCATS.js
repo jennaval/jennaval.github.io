@@ -14,7 +14,7 @@ $(document).ready(function() {
           '<div class="catType">' + item.type + '</div>' +
           '<div class="catGender">' + item.gender + '</div>' +
           '<img src=" ' + item.image + ' "/>' +
-          '<div class="commentsContainer">' + item.comments + '</div>';
+          '<div class="commentsContainer">' + item.comment + '</div>';
 
         html += '</div>';
 
