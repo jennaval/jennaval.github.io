@@ -23,7 +23,7 @@ $(document).ready(function() {
               '<div class="renterName">' + i.username + '</div>' +
               '<div class="renterComment">' + i.comment + '</div>' +
               '<div class="renterStars">' +
-              '</div>'; // closes panel
+            //  '</div>'; // closes panel
             //      var numStars = Number(i.stars);
 
             for (var j = 1; j <= 5; j++) {
