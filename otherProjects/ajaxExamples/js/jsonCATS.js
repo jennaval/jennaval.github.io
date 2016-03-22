@@ -15,13 +15,17 @@ $(document).ready(function() {
           '<div class="catGender"><small>Gender: </small>' + item.gender + '</div>' +
           '<img class="catImage" src="' + item.image + '"/>' +
           //  '<img src=" ' + item.image + ' "/>' +
-          '<div class="commentsContainer">';
-        $.each(item.comments, function(ind, i) { // ind = index , i = item -- same as above
-            html += '<div class="renterName">' + i.username + '</div>' +
-              '<div class="renterLocation">' + i.comment + '</div>';
-            '<div class="renterStars">';
+          '<div class="panel panel-default">' + //added
 
-      //      var numStars = Number(i.stars);
+          //'<div class="commentsContainer">';
+          '<div class="panel-heading">Renter Comments</div>';
+        $.each(item.comments, function(ind, i) { // ind = index , i = item -- same as above
+            html += '<div class="panel-body">' +
+              '<div class="renterName">' + i.username + '</div>' +
+              '<div class="renterComment">' + i.comment + '</div>' +
+              '<div class="renterStars">' +
+              '</div>';
+            //      var numStars = Number(i.stars);
 
             for (var j = 1; j <= 5; j++) {
               if (j <= i.stars) {
@@ -30,7 +34,7 @@ $(document).ready(function() {
                 html += '<img src="images/empty-star.png"/>';
               }
             }
-      //      html += '</div>'; // end stars
+            //      html += '</div>'; // end stars
           }) // each comment
 
         html += '</div>' + // commentsContainer
@@ -59,4 +63,12 @@ $(document).ready(function() {
   </div> //end commentsContainer
 </div> // end cat
 
+<div class="panel panel-default">
+  <div class="panel-heading">Render Comments</div>
+    <div class="panel-body">
+    //name
+    //Comments
+    //stars
+    </div>
+</div>
 */
