@@ -20,6 +20,9 @@ $(document).ready(function() {
             html += '<div class="renterName">' + i.username + '</div>' +
               '<div class="renterLocation">' + i.comment + '</div>';
               '<div class="renterStars">';
+
+              var numStars = Number(i.stars);
+              
                 for (var i = 1; i <= 5; i++) {
                   if (i <= i.stars){
                     html += '<img src="images/full-star.png"/>';
