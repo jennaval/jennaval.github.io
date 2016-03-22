@@ -21,10 +21,10 @@ $(document).ready(function() {
               '<div class="renterLocation">' + i.comment + '</div>';
             '<div class="renterStars">';
 
-            var numStars = Number(i.stars);
+      //      var numStars = Number(i.stars);
 
-            for (var i = 1; i <= 5; i++) {
-              if (i <= i.stars) {
+            for (var j = 1; i <= 5; i++) {
+              if (j <= i.stars) {
                 html += '<img src="images/full-star.png"/>';
               } else {
                 html += '<img src="images/empty-star.png"/>';
