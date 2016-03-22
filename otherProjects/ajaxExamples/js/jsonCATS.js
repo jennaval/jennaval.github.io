@@ -13,7 +13,7 @@ $(document).ready(function() {
           '<div class="catName">' + item.name + '</div>' +
           '<div class="catType">' + item.type + '</div>' +
           '<div class="catGender">' + item.gender + '</div>' +
-          '<div class="catImage" src="' + item.image + '"/>' +
+          '<img class="catImage" src="' + item.image + '"/>' +
         //  '<img src=" ' + item.image + ' "/>' +
           '<div class="commentsContainer">';
         $.each(item.comments, function(ind, i) { // ind = index , i = item -- same as above
