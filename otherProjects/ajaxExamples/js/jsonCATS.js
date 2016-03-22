@@ -14,23 +14,23 @@ $(document).ready(function() {
           '<div class="catType">' + item.type + '</div>' +
           '<div class="catGender">' + item.gender + '</div>' +
           '<img class="catImage" src="' + item.image + '"/>' +
-        //  '<img src=" ' + item.image + ' "/>' +
+          //  '<img src=" ' + item.image + ' "/>' +
           '<div class="commentsContainer">';
         $.each(item.comments, function(ind, i) { // ind = index , i = item -- same as above
             html += '<div class="renterName">' + i.username + '</div>' +
               '<div class="renterLocation">' + i.comment + '</div>';
-              '<div class="renterStars">';
+            '<div class="renterStars">';
 
-              var numStars = Number(i.stars);
-              
-                for (var i = 1; i <= 5; i++) {
-                  if (i <= i.stars){
-                    html += '<img src="images/full-star.png"/>';
-                  } else {
-                    html += '<img src="images/empty-star.png"/>';
-                  }
-                }
-              html += '</div>'; // end stars
+            var numStars = Number(i.stars);
+
+            for (var i = 1; i <= 5; i++) {
+              if (i <= i.stars) {
+                html += '<img src="images/full-star.png"/>';
+              } else {
+                html += '<img src="images/empty-star.png"/>';
+              }
+            }
+            html += '</div>'; // end stars
           }) // each comment
 
         html += '</div>' + // commentsContainer
