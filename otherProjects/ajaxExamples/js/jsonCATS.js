@@ -33,8 +33,7 @@ $(document).ready(function() {
                 html += '<img src="images/empty-star.png"/>';
               }
             }
-                  html += '</div>' +
-                  '</div>'; // end stars
+                  html += '</div>'; // end stars
           }) // each comment
 
         html += '</div>' + // commentsContainer
