@@ -10,9 +10,9 @@ $(document).ready(function() {
     $.each(data, function(index, item) {
         html += '<div class="col-md-4">' +
           // do some stuff
-          '<div class="catName"><small>Name:</small>' + item.name + '</div>' +
-          '<div class="catType"><small>Type:</small>' + item.type + '</div>' +
-          '<div class="catGender"><small>Gender:</small>' + item.gender + '</div>' +
+          '<div class="catName"><small>Name: </small>' + item.name + '</div>' +
+          '<div class="catType"><small>Type: </small>' + item.type + '</div>' +
+          '<div class="catGender"><small>Gender: </small>' + item.gender + '</div>' +
           '<img class="catImage" src="' + item.image + '"/>' +
           //  '<img src=" ' + item.image + ' "/>' +
           '<div class="commentsContainer">';
