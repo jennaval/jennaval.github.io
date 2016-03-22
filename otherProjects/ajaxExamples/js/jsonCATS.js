@@ -33,12 +33,13 @@ $(document).ready(function() {
                 html += '<img src="images/empty-star.png"/>';
               }
             }
-            //      html += '</div>'; // end stars
+                  html += '</div>' +
+                  '</div>'; // end stars
           }) // each comment
 
         html += '</div>' + // commentsContainer
-          '</div>'+ // col-md-4
-'</div>';
+          '</div>'; // col-md-4
+
       }) // each cat
     $("#catData").append(html);
   })
