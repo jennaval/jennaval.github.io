@@ -23,7 +23,7 @@ $(document).ready(function() {
 
       //      var numStars = Number(i.stars);
 
-            for (var j = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
               if (j <= i.stars) {
                 html += '<img src="images/full-star.png"/>';
               } else {
