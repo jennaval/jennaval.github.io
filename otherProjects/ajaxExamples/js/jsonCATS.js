@@ -13,6 +13,7 @@ $(document).ready(function() {
           '<div class="catName"><small>Name: </small>' + item.name + '</div>' +
           '<div class="catType"><small>Type: </small>' + item.type + '</div>' +
           '<div class="catGender"><small>Gender: </small>' + item.gender + '</div>' +
+          '<br>' +
           '<img class="catImage" src="' + item.image + '"/>' +
           //  '<img src=" ' + item.image + ' "/>' +
           '<div class="commentsContainer">';
