@@ -14,9 +14,14 @@ $(document).ready(function() {
           '<div class="catType">' + item.type + '</div>' +
           '<div class="catGender">' + item.gender + '</div>' +
           '<img src=" ' + item.image + ' "/>' +
-          '<div class="commentsContainer">' + item.comment + '</div>';
+          '<div class="commentsContainer">';
+          $.each(item.comments, function(ind, i) { // ind = index , i = item -- same as above
+            html += '<div class="renterName">' + i.username + '</div>' +
+                    '<div class="renterLocation">' + i.comment + '</div>';
+          }) // each comment
 
-        html += '</div>';
+        html += '</div>' + // commentsContainer
+                '</div>'; // col-md-4
 
       }) // each cat
     $("#catData").append(html);
@@ -34,7 +39,7 @@ $(document).ready(function() {
   <div class="commentsContainer">
     //one per comment
     <div class="renterName"></div>
-    <div class="renterLocation"></div>
+    <div class="renterComment"></div>
     <div class="renterStars">
     //5 stars, some full - some empty
   </div> //end starts
