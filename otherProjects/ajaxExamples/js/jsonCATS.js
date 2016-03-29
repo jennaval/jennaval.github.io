@@ -22,8 +22,8 @@ $(document).ready(function() {
             html += '<div class="panel-body">' +
               '<div class="renterName">' + i.username + '</div>' +
               '<div class="renterComment">' + i.comment + '</div>' +
-              '<div class="renterStars">' +
-              '</div>'; // closes panel
+              '<div class="renterStars">';
+            //  '</div>'; // closes panel
             //      var numStars = Number(i.stars);
 
             for (var j = 1; j <= 5; j++) {
@@ -33,14 +33,16 @@ $(document).ready(function() {
                 html += '<img src="images/empty-star.png"/>';
               }
             }
-                  html += '</div>'; // end stars
+                  html += '</div>' + // end stars
+                          '</div>'; // closes panel-body
           }) // each comment
 
         html += '</div>' + // commentsContainer
           '</div>'; // col-md-4
 
       }) // each cat
-    $("#catData").append(html);
+    //$("#catData").append(html);
+    $("#pageContent").html(html);
   })
 
 })
