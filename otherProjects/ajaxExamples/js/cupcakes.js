@@ -16,10 +16,10 @@ $(document).ready(function () {
                             '<img class="cupcakeImg" src="' + item.image + '"/>' +
                             // '<div class="commentsContainer">';
 
-                            '<div class="panel panel-default">' + //added
-                            '<div class="panel-heading">Cupcake Reviews! </div>'; //added
+                            '<div class="panel panel-default">' +
+                            '<div class="panel-heading">Cupcake Reviews! </div>';
                         $.each(item.comments, function (ind, i) {
-                                html += '<div class="panel-body">' + //added
+                                html += '<div class="panel-body">' +
                                     '<div class ="buyerName">' + i.username + '</div>' +
                                     '<div class ="buyerComment">' + i.comment + '</div>' +
                                     '<div class="renderStars">';
@@ -32,13 +32,13 @@ $(document).ready(function () {
                                         html += '<img src="images/empty-star.png"/>';
                                     }
 
-                                } // loop
+                                } // closes loop
 
                                 html +=
                                     '</div>' + //end stars
-                                    '</div>'; //panel body
+                                    '</div>'; //closes panel body
 
-                            }) //each comment
+                            }) //closes each comment
 
                         html += '</div>' + // comments container
                             '</div>' + //panel
