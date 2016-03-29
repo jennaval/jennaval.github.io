@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-        $.getJSON("jsonDatabase/cupcakes.json", function (data) {
+        $.getJSON("jsonDatabase/cupcake.json", function (data) {
 
                 console.dir(data);
                 var html = "";
