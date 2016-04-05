@@ -1,0 +1,58 @@
+[{
+  "name": "Velvety",
+  "flavour": "Red Velvet",
+  "price": "$2.29",
+  "image": "images/cake1.jpg",
+  "desc": "Cocoa butter cake with cream cheese frosting",
+  "comments": [{
+    "username": "cupcakelover",
+    "stars": 5,
+    "comment": "Just the greatest cupcake I've ever had"
+  }, {
+    "username": "velvetvelvetvelvet",
+    "stars": 3,
+    "comment": "I've tasted better"
+  }, {
+    "username": "cookiemonster",
+    "stars": 1,
+    "comment": "Nope."
+  }]
+}, {
+  "name": "Classic Vanilla",
+  "flavour": "Vanilla Cream",
+  "price": "$2.29",
+  "image": "images/cake2.jpg",
+  "desc": "Vanilla cake with creamy white chocolate frosting",
+  "comments": [{
+    "username": "Koooookie",
+    "stars": 4,
+    "comment": "My fav!! "
+  }, {
+    "username": "vanillagirl",
+    "stars": 2,
+    "comment": "Could be better"
+  }, {
+    "username": "iceicebaby",
+    "stars": 5,
+    "comment": "Wayyy better that I expected~"
+  }]
+}, {
+  "name": "Cookie and Cream",
+  "flavour": "Oreo",
+  "price": "$2.29",
+  "image": "images/cake3.jpg",
+  "desc": "Chocolate cake with Orea and cookies butter cream",
+  "comments": [{
+    "username": "yaaaaaycake",
+    "stars": 5,
+    "comment": "Ummm just the absolute best!!!"
+  }, {
+    "username": "chocolaaaaatey",
+    "stars": 4,
+    "comment": "Greattttt"
+  }, {
+    "username": "princess7",
+    "stars": 5,
+    "comment": "Looove it"
+  }]
+}]
