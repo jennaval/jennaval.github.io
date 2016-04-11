@@ -111,6 +111,14 @@ $(document).ready(function() {
                 $("#log").append("<br>Input blur");
                 $(this).css("background-color", "#FFF");
               });
+            //change event
+            $("#cakeSelect").on("change", function() {
+              $("#log").append("<br>Select change");
+              var val = $(this).val();
+
+              $("#mySelectMessage").html(val + " is a nice selection!");
+
+            });
 
           }) // get
 
