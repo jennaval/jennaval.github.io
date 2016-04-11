@@ -147,6 +147,7 @@ h4 {
 }
 #successMsg {
   text-align: center;
+  padding: 10px;
   color: #52241f;
 }
 #cc {}

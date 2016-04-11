@@ -134,11 +134,15 @@ $(document).ready(function() {
         order[id] = $(this).val();
       })
       alert("Sending to database " + JSON.stringify(order)); // alert box to inform buyer
-      $("#successMsg").html("Order received!<br><br>" + // msg appears below
+      $("#successMsg").html("<img id='cc' src='images/icon.png'><br>" + // cupcake icon
+      "Order received...<br>" + // msg appears below
+      "Thank you, " + order.name +
+      "! " + "<br>" +
         order.quantity +
-        order.cakeSelect + " cupcakes will be delivered on " +
+        " ` " +
+        order.cakeSelect + " cupcakes will be waiting for you on " +
         order.devDate +
-        "<img id='cc' src='images/icon.png'>"); // cupcake icon in successMsg
+      "<br><br>" );
     } // sendConfirmation
 
 
