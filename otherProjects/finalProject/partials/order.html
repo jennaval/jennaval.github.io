@@ -1,38 +1,128 @@
-<div class="row">
-  <div class="col-md-12">
-    <label>Name:</label>
-    <input id="mySingleLineText" class="form-control" onblur="if(this.value == '') { this.value = 'Type here'; }" onfocus="if(this.value == 'Type here') { this.value = ''; }" type="text" value="Type here">
-  </div>
-  <br>
-  <div class="col-md-12">
-    <label>Message:</label>
-    <textarea id="myTextArea" class="form-control" rows="10" cols="50" onblur="if(this.value == '') { this.value = 'Write something here'; }" onfocus="if(this.value == 'Write something here') { this.value = ''; }">Write something here</textarea>
-  </div>
-  <div class="col-md-12">
-    <label>Age:</label>
-    <select id="mySelect">
-      <option value="value1">Value 1</option>
-      <option value="value2" selected>Value 2</option>
-      <option value="value3">Value 3</option>
+<h2>Place Order Here:</h2>
+<div class="col-xs-12 col-md-3"></div>
+<div id="orderForm" class="col-xs-12 col-md-6">
+
+  <div class="col-xs-12 col-md-4">
+    <label class="control-label">
+      Choose Cupcake
+    </label>
+    <select id="cakeSelect" class="form-control">
+      <option value="Velvety">Velvety</option>
+      <option value="Classic Vanilla">Classic Vanilla</option>
+      <option value="Cookie and Cream">Cookie and Cream</option>
     </select>
   </div>
-  <div class="col-md-12">
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="vehicle" value="Bike"> I have a bike
-      </label>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" name="vehicle" value="Car"> I have a car
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-12">
-    <button id="myButton" class="btn btn-primary" type="button">Click Me!</button>
-  </div>
-  <div class="col-md-12">
+
+  <div class="col-xs-12 col-md-4"> <!-- order quantity -->
+    <label class="control-label">
+      Quantity
+    </label>
+    <input type="text" id="quantity" name="name" class="form-control">
   </div>
 
-  <div id="log">LOG</div>
+  <div class="col-xs-12 col-md-4"> <!-- pick date for delivery -->
+    <label class="control-label">
+      Delivery Date
+    </label>
+    <input type="text" id="devDate" name="name" class="form-control">
+  </div>
+
+  <div class="col-xs-12 col-md-12"> <!-- buyer's info -->
+    <label class="control-label">
+      Card Holder's Name
+    </label>
+    <input type="text" id="name" class="form-control" placeholder="Full Name">
+  </div>
+
+  <div class="col-xs-12 col-md-8">
+    <label class="control-label">
+      Card Number
+    </label>
+    <input id="cardNumber" type="text" maxlength="14" placeholder="Card Number" class="form-control input-md">
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <label class="control-label">
+      Card CVV
+    </label>
+    <input type="text" id="securityCode" class="form-control" maxlength="3" placeholder="3 digits" title="Three digits at back of your card">
+  </div>
+
+  <div class="col-xs-12  col-md-6">
+    <label class="control-label">
+      Card Expiry Month
+    </label>
+    <select id="expirymonth" name="expirymonth" class="form-control">
+      <option value="01">January</option>
+      <option value="02">February</option>
+      <option value="03">March</option>
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+      <option value="07">July</option>
+      <option value="08">August</option>
+      <option value="09">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <label class="control-label">
+      Card Expiry Year
+    </label>
+    <input id="expiryYear" type="text" placeholder="Year eg. 2014" class="form-control input-md">
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <label class="control-label">
+      Address
+    </label>
+    <input id="address1" type="text" class="form-control">
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <label class="control-label">
+      Postal Code
+    </label>
+    <input type="text" id="zip" class="form-control">
+  </div>
+
+  <div class="col-sm-6 col-xs-6 col-md-6">
+    <label class="control-label">
+      State/Province
+    </label>
+    <input type="text" id="state" class="form-control">
+  </div>
+
+  <div class="col-sm-6 col-xs-6 col-md-6">
+    <label class="control-label">
+      Country
+    </label>
+    <input type="text" class="form-control" id="country">
+  </div>
+<!-- RADIO BUTTON -->
+<div class="col-xs-12 col-md-12">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="onlineOrder" value="delivery"> I want my order delivered!
+    </label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="onlineOrder" value="pickup"> I will pick up my order!
+      </label>
+    </div>
+  </div>
 </div>
+<!-- RADION BUTTON ENDS -->
+  <div class="col-md-12">
+    <br> <!-- place order -->
+    <button id="submitButton" class="btn btn-default">
+      Place Order
+    </button>
+  </div>
+  <!-- success message when buyer click order button -->
+<div id='successMsg' class='col-md-12 text-success'></div>
+</div>
+<div class="col-xs-12 col-md-3"></div>

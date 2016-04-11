@@ -36,7 +36,7 @@ $(document).ready(function() {
                 // '<div class="commentsContainer">';
 
                 '<div class="panel panel-default">' +
-                '<div class="panel-heading">Cupcake Reviews! </div>';
+                '<div class="panel-heading">Cupcake Reviews: </div>';
               $.each(item.comments, function(ind, i) {
                   html += '<div class="panel-body">' +
                     '<div class ="buyerName">' + i.username + '</div>' +
@@ -69,79 +69,60 @@ $(document).ready(function() {
         })
 
       } else if (partial == "orderPage") { // ajax order.html
-        $.get("partials/order2.html", function(data) { // link order page
-          $("#pageContent").html(data);
+        $.get("partials/order.html", function(data) { // link order page
+            $("#pageContent").html(data);
 
-          // ORDER PAGE 2
+            // ORDER PAGE 2
 
-          //activate the datepicker
-          $('#startRentDate, #endRentDate').datepicker({
+            //activate the datepicker
+            $('#devDate, #endRentDate').datepicker({});
 
+            $("#submitButton").on("click", function() {
+                //alert("hey"); // add error class to div container - red border
+                $("input, select").filter(function() {
+                  return !this.value;
+                }).closest("div").addClass("has-error");
 
-          });
+                //remove error class for non empty ones - red border
+                $("input, select").filter(function() {
+                  return this.value;
+                }).closest("div").removeClass("has-error");
 
-          /*
-                    // BOOTSTRAP.JS FOR EVENTS ON ORDER PAGE
-                    $("#myButton").on("mouseenter", function() {
-                        $("#log").append("<br>Button mouseenter");
-                        $(this).text("Order Now!");
-                      })
-                      .on("mouseleave", function() {
-                        $("#log").append("<br>Button mouseleave");
-                        $(this).text("Submit Order");
-                      });
+                var errors = $(".has-error");
+                if (errors.length < 1) {
+                  sendConfirmation(); //alert("no errors");
+                }
+              }) // click
 
-                    //focus & blur events
-                    $("#mySingleLineText").on("focus", function() {
-                        $("#log").append("<br>Input focus");
-                        $(this).css("background-color", "#E9F2F5");
-                      })
-                      // blur event
-                      .on("blur", function() {
-                        $("#log").append("<br>Input blur");
-                        $(this).css("background-color", "#FFF");
-                      });
+            $("#submitButton").on("mouseenter", function() {
+                $("#log").append("<br>Button mouseenter");
+                $(this).text("Order Now!");
+              })
+              .on("mouseleave", function() {
+                $(this).text("Place Order");
+              });
 
-                    //change event
-                    $("#mySelect").on("change", function() {
-                      $("#log").append("<br>Select change");
-                      var val = $(this).val();
-
-                      $("#mySelectMessage").html(val + " is a nice selection!");
-
-                    });
-
-                    // FUNCTIONS
-                    $("#myButton").click(function() {
-
-                      $("#log").append("<br>User clicked the button");
-
-                      var userOrder = {};
-
-                      userOrder.myInput = $("#mySingleLineText").val();
-                      userOrder.myTextArea = $("#myTextArea").val();
-                      userOrder.mySelect = $("#mySelect").val();
-                      userOrder.myRadio = $("[name='gender']:checked").val();
-                      userOrder.myCheckValues = [];
-
-                      $("[name='vehicle']:checked").each(function() {
-                        myCheckValues.push($(this).val());
-                      });
-
-                      $("#log").append("<br>Value of input is: " + userOrder.myInput);
-                      $("#log").append("<br>Value of textarea is: " + userOrder.myTextarea);
-                      $("#log").append("<br>Value of select is: " + userOrder.mySelect);
-                      $("#log").append("<br>Value of radio is: " + userOrder.myRadio);
-                      $("#log").append("<br>Value of value is: " + userOrder.myCheckValues.join());
-                      $("#log").append("<br>Value of userOrder is: " + userOrder );
-                    });
-
-                    */
-        })
+          }) // get
 
       }
-      $("pageContent").fadeIn()
+      $("pageContent").fadeIn();
     }
+
+    function sendConfirmation() {
+      var order = {};
+      var formData = $("input, select");
+      formData.each(function() {
+        var id = $(this).attr("id");
+        order[id] = $(this).val();
+      })
+      alert("Sending to database " + JSON.stringify(order)); // alert box to inform buyer
+      $("#successMsg").html("Order received!<br><br>" + // msg appears below
+        order.quantity +
+        order.cakeSelect + " cupcakes will be delivered on " +
+        order.devDate +
+        "<img id='cc' src='images/icon.png'>"); // cupcake icon in successMsg
+    } // sendConfirmation
+
 
     // begin the parogram, get the homepage
     getPartial("homePage");

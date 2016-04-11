@@ -5,9 +5,8 @@
   background-color: #ff0;
 }
 */
-.nav-tabs.nav-justified>.active>a,
-.nav-tabs.nav-justified>.active>a:focus,
-.nav-tabs.nav-justified>.active>a:hover {
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
   background-color: #52241f;
   color: #fff;
   font-weight: 500;
@@ -18,23 +17,24 @@ li a {
 li a:hover {
   color: #52241f;
 }
+
 /* CAROUSEL */
+
 .carousel {
-  background: #52241f; /* 2f4357*/
+  background: #52241f;
+  /* 2f4357*/
   margin-top: 20px;
 }
-
 .carousel .item img {
   margin: 0 auto;
   /* Align slide image horizontally center */
 }
-
 .bs-example {
   margin: 20px;
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.4);
-  padding:10px;
+  padding: 10px;
 }
 .carousel-caption h3 {
   font-family: 'Lobster', cursive;
@@ -44,9 +44,10 @@ li a:hover {
 .carousel-caption p {
   color: #fff;
 }
+
 /* BROWSE // JSON PAGE */
-.container {
- }
+
+.container {}
 html {
   position: relative;
   min­height: 100%;
@@ -84,6 +85,7 @@ body {
   text-align: center;
 }
 .flavour {
+  font-family: 'Indie Flower', cursive;
   font-size: 20px;
   text-align: center;
 }
@@ -92,7 +94,8 @@ body {
   text-align: center;
 }
 .desc {
-  font-size: 12px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 14px;
   padding: 5px;
   font-weight: bold;
   text-align: center;
@@ -113,3 +116,22 @@ body {
   text-align: center;
   border: #333 solid 3px;
 }
+h2 {
+  text-align: center;
+  color: #510e0e;
+  font-family: 'Indie Flower', cursive;
+}
+#info {
+  background-color: #52241f;
+  color: #fff;
+  text-align: center;
+  padding: 7px;
+}
+h4 {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+}
+#successMsg {
+  text-align: center;
+}
+#cc {}
