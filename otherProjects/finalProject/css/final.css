@@ -12,12 +12,18 @@
   font-weight: 500;
 }
 li a {
+  font-family: 'Indie Flower', cursive;
+  font-size: 15px;
+  font-weight: 600;
   color: #000;
 }
 li a:hover {
   color: #52241f;
 }
-
+label {
+  font-family: 'Indie Flower', cursive;
+  font-size: 16px;
+}
 /* CAROUSEL */
 
 .carousel {
@@ -120,6 +126,9 @@ body {
   font-weight: bold;
   text-align: center;
   border: #333 solid 3px;
+}
+#submitButton {
+  color: #52241f;
 }
 h2 {
   text-align: center;
