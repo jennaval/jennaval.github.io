@@ -135,7 +135,7 @@ $(document).ready(function() {
       })
       alert("Sending to database " + JSON.stringify(order)); // alert box to inform buyer
       $("#successMsg").html("<img id='cc' src='images/icon.png'><br>" + // cupcake icon
-      "Order received...<br>" + // msg appears below
+      "Order received...<br><br>" + // msg appears below
       "Thank you, " + order.name +
       "! " + "<br>" +
         order.quantity +
