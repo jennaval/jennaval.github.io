@@ -102,6 +102,16 @@ $(document).ready(function() {
                 $(this).text("Place Order");
               });
 
+            $("#quantity, #name, #cardNumber, #securityCode, #expirymonth, #expiryYear, #address1, #zip, #state, #country").on("focus", function() {
+                $("#log").append("<br>Input focus");
+                $(this).css("background-color", "#F2EEED");
+              })
+              // blur event
+              .on("blur", function() {
+                $("#log").append("<br>Input blur");
+                $(this).css("background-color", "#FFF");
+              });
+
           }) // get
 
       }
